@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de la Zona</title>
+    <link rel="stylesheet" href="/CSS/agregar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Zona arqueológica</a></li>
+                <li><a href="#">Tours</a></li>
+            </ul>
+            <div class="logo">
+                <a href="/HTML/Home.html">
+                    <img src="/ASSETS/logo.png" alt="Chichén Itzá Logo">
+                </a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Datos de la zona</h1>
+
+        <!-- Formulario de datos de la zona -->
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Escribe el nombre de la zona">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" placeholder="Escribe una descripción">
+            </div>
+            <div class="form-group">
+                <label for="nivel">Nivel de acceso:</label>
+                <input type="text" id="nivel" placeholder="Escribe el nivel de acceso">
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="action-buttons">
+                <button type="button" class="cancel-btn">Cancelar</button>
+                <button type="submit" class="save-btn">Guardar</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Menú desplegable a pantalla completa -->
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <span class="close-btn" onclick="toggleMenu()">&#10005;</span>
+        <ul>
+            <li><a href="/HTML/Recorrido.html">Recorrido virtual</a></li>
+            <li><a href="#">Historia y Cultura</a></li>
+            <li><a href="#">Sostenibilidad y ODS</a></li>
+            <li><a href="/HTML/Avatar.html">Avatar</a></li>
+        </ul>
+        <div class="menu-footer">
+            <h3>Guía rápida</h3>
+            <ul>
+                <li><a href="#">Registro | Inicio de sesión</a></li>
+                <li><a href="#">Tipo de recorrido</a></li>
+                <li><a href="#">Interacción del recorrido</a></li>
+            </ul>
+            <p>¿Necesitas ayuda? <span>?</span></p>
+        </div>
+    </div>
+
+    <script src="/JS/menu.js"></script>
+</body>
+</html>

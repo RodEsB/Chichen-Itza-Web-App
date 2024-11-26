@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+header {
+    background-color: #31511E;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 80px; /* Fija una altura para el header */
+}
+
+.home-title{
+    font-size: 36px;
+    font-family:monospace;
+    letter-spacing: 3px;
+}
+
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+    left: 20px;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+}
+
+.menu li {
+    margin-left: 30px;
+    margin-right: 60px;
+
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%; /* Centra verticalmente */
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-text small {
+    font-size: 10px;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+}
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('/ASSETS/chichen-itza-serpiente.jpg'); /* URL de la imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3em;
+    font-family: monospace;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2; /* Coloca el texto encima de la capa oscura */
+} 
+
+.login-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila (por defecto) */
+    height: 100vh;
+    margin-top: 80px; /* Compensa el header fijo */
+}
+
+.background-image {
+    flex: 1; /* La imagen ocupará la columna izquierda */
+    background-image: url('/ASSETS/chichen-itza-serpiente.jpg'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    height: calc(100vh - 80px); /* Ajusta la altura, restando la del header */
+    margin-top: 0; /* Elimina cualquier margen superior */
+    position: relative;
+    top: 80px; /* Empieza justo después del header */
+}
+
+.background-image {
+    flex: 1; /* La imagen ocupará la columna izquierda */
+    background-image: url('/ASSETS/chichen-itza-serpiente.jpg'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-panel {
+    margin-left: auto; /* Empuja el panel hacia la derecha */
+    margin-right: 0;
+    flex: 0.5; /* Sigue ocupando la mitad del espacio */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    padding: 100px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    height: 100%; /* Asegura que el panel tenga la altura completa de su contenedor */
+}
+
+
+.login-panel h1 {
+    font-size: 24px;
+    font-family: monospace;
+    margin-bottom: 50px;
+
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 20px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.google-btn {
+    background-color: white;
+    color: black;
+}
+
+.apple-btn {
+    background-color: white;
+    color: black;
+}
+
+.email-btn {
+    background-color: white; /* Verde oscuro */
+    color: black;
+}
+
+.login-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.register-link {
+    margin-top: 50px;
+    font-size: 14px;
+    color: white;
+}
+
+.register-link a {
+    color: #4A7728; 
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos del menú de pantalla completa */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    padding: 20px;
+}
+
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fullscreen-menu ul li {
+    margin-bottom: 60px; /* Espacio entre cada elemento de la lista */
+}
+
+.fullscreen-menu ul li:last-child {
+    margin-bottom: 0; /* Elimina el margen del último elemento */
+}
+
+.fullscreen-menu a {
+    font-size: 40px;
+    font-family: monospace;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.fullscreen-menu .menu-footer {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.fullscreen-menu .menu-footer h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.fullscreen-menu a{
+    font-size: 40px;
+    font-family: monospace;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.menu-footer a{
+    font-size: 30px;
+    font-family: monospace;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+/* Efecto de dos columnas usando Grid */
+.fullscreen-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.fullscreen-menu ul:first-child {
+    grid-column: 1; /* Primera columna */
+    text-align: left;
+}
+
+.menu-footer ul {
+    grid-column: 2; /* Segunda columna */
+    text-align: right;
+}
+
+.menu-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-footer ul li {
+    margin-bottom: 20px; /* Espacio entre cada elemento de la lista */
+}
+
+.menu-footer ul li:last-child {
+    margin-bottom: 0; /* Elimina el margen del último elemento */
+}
+
+.menu-footer p {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    text-align: right;
+    font-size: 1em; 
+    color: white; 
+    margin: 0; 
+}
+
+.menu-footer span {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Botón de cierre */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    z-index: 3; /* Asegura que el botón esté visible */
+}

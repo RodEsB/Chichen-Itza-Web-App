@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+header {
+    background-color: #31511E;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Menú desplegable a pantalla completa */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreen-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.fullscreen-menu ul li {
+    margin: 15px 0;
+}
+
+.fullscreen-menu ul li a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.menu-footer {
+    text-align: center;
+}
+
+.menu-footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.menu-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-footer ul li {
+    margin: 10px 0;
+}
+
+.menu-footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-footer p {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.menu-footer span {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.search-icon, .filter-icon {
+    font-size: 1.5em;
+    color: #31511E;
+    margin: 0 10px;
+}
+
+.filter-icon {
+    width: 24px; /* Ajusta según el tamaño deseado */
+    height: auto;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: #31511E;
+}
+
+.search-bar input::placeholder {
+    color: #31511E;
+}
+
+/* Estilo de la tabla de participantes */
+.participants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f4f4e6;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.participants-table th, .participants-table td {
+    padding: 15px;
+    text-align: left;
+    color: #31511E;
+}
+
+.participants-table th {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.participants-table tr:nth-child(even) {
+    background-color: #e9e9d8;
+}
+
+.participants-table tr:nth-child(odd) {
+    background-color: #f4f4e6;
+}
+
+/* Estilo de los botones de acción */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn, .add-btn, .save-btn {
+    background-color: #31511E;
+    color: #ffffff;
+}
+
+.delete-btn {
+    background-color: #a11a1a;
+    color: #ffffff;
+}

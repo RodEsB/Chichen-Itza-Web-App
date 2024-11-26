@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Participantes</title>
+    <link rel="stylesheet" href="/CSS/avatar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="/HTML/Zonas.html">Zona arqueológica</a></li>
+                <li><a href="#">Tours</a></li>
+            </ul>
+            <div class="logo">
+                <a href="/HTML/Home.html"> <!-- Enlace al Home -->
+                    <img src="/ASSETS/logo.png" alt="Chichén Itzá Logo">
+                </a>
+            </div>        
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gestión de Participantes</h1>
+        
+        <!-- Caja de búsqueda -->
+        <div class="search-bar">
+            <span class="search-icon">&#128269;</span> <!-- Ícono de búsqueda -->
+            <input type="text" placeholder="Buscar...">
+            <img src="/ASSETS/filtro.png" alt="Filtro" class="filter-icon"> <!-- Icono de filtro -->
+        </div>
+        
+        <!-- Tabla de participantes -->
+        <table class="participants-table">
+            <thead>
+                <tr>
+                    <th>Rol</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Guía</td>
+                    <td>José Sánchez</td>
+                </tr>
+                <tr>
+                    <td>Turista</td>
+                    <td>Diego Cruz</td>
+                </tr>
+                <tr>
+                    <td>Turista</td>
+                    <td>Antonio Dominguez</td>
+                </tr>
+                <tr>
+                    <td>Guía</td>
+                    <td>Lamine Yamal</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+            <button class="cancel-btn">Cancelar</button>
+            <button class="add-btn" onclick="location.href='/HTML/Participante.html'">Agregar participante</button>
+            <button class="delete-btn">Eliminar selección</button>
+            <button class="save-btn">Guardar</button>
+        </div>
+    </main>
+
+    <!-- Menú desplegable a pantalla completa -->
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <span class="close-btn" onclick="toggleMenu()">&#10005;</span>
+        <ul>
+            <li><a href="#">Recorrido virtual</a></li>
+            <li><a href="#">Historia y Cultura</a></li>
+            <li><a href="#">Sostenibilidad y ODS</a></li>
+            <li><a href="/HTML/Avatar.html">Avatar</a></li>
+        </ul>
+        <div class="menu-footer">
+            <h3>Guía rápida</h3>
+            <ul>
+                <li><a href="#">Registro | Inicio de sesión</a></li>
+                <li><a href="#">Tipo de recorrido</a></li>
+                <li><a href="#">Interacción del recorrido</a></li>
+            </ul>
+            <p>¿Necesitas ayuda? <span>?</span></p>
+        </div>
+    </div>
+
+    <script src="/JS/menu.js"></script>
+</body>
+</html>
