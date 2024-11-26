@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Arqueológica - Chichén Itzá</title>
+    <link rel="stylesheet" href="/CSS/inicio_sesion.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/HTML/Home.html"> <!-- Enlace al Home -->
+                    <img src="/ASSETS/logo.png" alt="Chichén Itzá Logo">
+                </a>
+            </div>        
+            <ul class="menu">
+                <li><a href="/HTML/Zonas.html">Zona arqueológica</a></li>
+                <li><a href="#">Tours</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <section class="hero">
+           <!-- Login Section -->
+        <div class="login-panel">
+            <h1>Iniciar sesión</h1>
+            <div class="login-buttons">
+                <button class="login-btn google-btn">
+                    <img src="/ASSETS/google-icon.png" alt="Google Icon"> Continuar con Google
+                </button>
+                <button class="login-btn apple-btn">
+                    <img src="/ASSETS/apple-icon.png" alt="Apple Icon"> Continuar con Apple
+                </button>
+                <button class="login-btn email-btn">
+                    <img src="/ASSETS/email-icon.png" alt="Email Icon"> Continuar con email
+                </button>
+            </div>
+            <p class="register-link">
+                ¿No tienes cuenta? <a href="/HTML/Registrase.html">Regístrate</a>
+            </p>
+        </div>
+        <div class="fullscreen-menu" id="fullscreen-menu">
+            <span class="close-btn" onclick="toggleMenu()">&#10005;</span>
+            <ul>
+                <li><a href="/HTML/Recorrido.html">Recorrido virtual</a></li>
+                <li><a href="#">Historia y Cultura</a></li>
+                <li><a href="#">Sostenibilidad y ODS</a></li>
+                <li><a href="/HTML/Avatar.html">Avatar</a></li>
+            </ul>
+            <div class="menu-footer">
+                <h3>Guía rápida</h3>
+                <ul>
+                    <li><a href="/HTML/Inicio_sesion.html">Registro | Inicio de sesión</a></li>
+                    <li><a href="#">Tipo de recorrido</a></li>
+                    <li><a href="#">Interacción del recorrido</a></li>
+                </ul>
+                <p>¿Necesitas ayuda? <span>?</span></p>
+            </div>
+        </div>
+    </section>
+    <script src="/JS/menu.js"></script>
+</body>
+</html>
