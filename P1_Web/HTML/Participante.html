@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos del Participante</title>
     <link rel="stylesheet" href="/CSS/participante.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Librería jQuery -->
+    <script src="/JS/participante.js" defer></script> <!-- Archivo para la lógica de guardar -->
 </head>
 <body>
     <header>
@@ -26,7 +28,7 @@
         <h1>Datos del participante</h1>
 
         <!-- Formulario de datos del participante -->
-        <form>
+        <form id="form-participante">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" placeholder="Escribe el nombre">

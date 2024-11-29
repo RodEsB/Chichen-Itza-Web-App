@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Participantes</title>
     <link rel="stylesheet" href="/CSS/avatar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Librería jQuery -->
+    <script src="/JS/avatar.js" defer></script> <!-- Archivo para la lógica de AJAX -->
 </head>
 <body>
     <header>
@@ -28,7 +30,7 @@
         <!-- Caja de búsqueda -->
         <div class="search-bar">
             <span class="search-icon">&#128269;</span> <!-- Ícono de búsqueda -->
-            <input type="text" placeholder="Buscar...">
+            <input type="text" id="search-input" placeholder="Buscar...">
             <img src="/ASSETS/filtro.png" alt="Filtro" class="filter-icon"> <!-- Icono de filtro -->
         </div>
         
@@ -36,27 +38,13 @@
         <table class="participants-table">
             <thead>
                 <tr>
+                    <th><input type="checkbox" id="select-all"></th> <!-- Seleccionar todos -->
                     <th>Rol</th>
                     <th>Nombre</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Guía</td>
-                    <td>José Sánchez</td>
-                </tr>
-                <tr>
-                    <td>Turista</td>
-                    <td>Diego Cruz</td>
-                </tr>
-                <tr>
-                    <td>Turista</td>
-                    <td>Antonio Dominguez</td>
-                </tr>
-                <tr>
-                    <td>Guía</td>
-                    <td>Lamine Yamal</td>
-                </tr>
+            <tbody id="participantes-body">
+                <!-- Los datos de los participantes se cargarán dinámicamente aquí -->
             </tbody>
         </table>
 
@@ -88,7 +76,5 @@
             <p>¿Necesitas ayuda? <span>?</span></p>
         </div>
     </div>
-
-    <script src="/JS/menu.js"></script>
 </body>
 </html>

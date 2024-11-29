@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de la Zona</title>
     <link rel="stylesheet" href="/CSS/agregar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Librería jQuery -->
+    <script src="/JS/agregar_zonas.js" defer></script> <!-- Lógica de guardar -->
 </head>
 <body>
     <header>
@@ -26,7 +28,7 @@
         <h1>Datos de la zona</h1>
 
         <!-- Formulario de datos de la zona -->
-        <form>
+        <form id="form-zona">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" placeholder="Escribe el nombre de la zona">
@@ -37,7 +39,7 @@
             </div>
             <div class="form-group">
                 <label for="nivel">Nivel de acceso:</label>
-                <input type="text" id="nivel" placeholder="Escribe el nivel de acceso">
+                <input type="number" id="nivel" placeholder="Escribe el nivel de acceso">
             </div>
 
             <!-- Botones de acción -->

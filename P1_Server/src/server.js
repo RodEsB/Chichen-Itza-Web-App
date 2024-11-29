@@ -3,6 +3,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const zonasRouter = require('./routes/zonas.router');
+const participantesRouter = require('./routes/participantes.router');
+
 //const recorridosRoutes = require('./routes/recorridos');
 
 const app = express();
@@ -22,6 +25,10 @@ app.get('/', (req, res) => {
 
 // Rutas de la API
 //app.use('/api/recorridos', recorridosRoutes);
+
+// Routes
+app.use('/api/zonas', zonasRouter);
+app.use('/api/participantes', participantesRouter);
 
 // Iniciar el servidor
 app.listen(PORT, () => {

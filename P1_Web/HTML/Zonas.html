@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Zonas</title>
     <link rel="stylesheet" href="/CSS/zonas.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Librería jQuery -->
+    <script src="/JS/zonas.js" defer></script> <!-- Archivo para la lógica de AJAX -->
 </head>
 <body>
     <header>
@@ -28,7 +30,7 @@
         <!-- Caja de búsqueda -->
         <div class="search-bar">
             <span class="search-icon">&#128269;</span>
-            <input type="text" placeholder="Buscar...">
+            <input type="text" id="search-input" placeholder="Buscar...">
             <img src="/ASSETS/filtro.png" alt="Filtro" class="filter-icon"> <!-- Icono de filtro -->
         </div>
         
@@ -36,32 +38,14 @@
         <table class="zones-table">
             <thead>
                 <tr>
+                    <th><input type="checkbox" id="select-all"></th> <!-- Seleccionar todos -->
                     <th>Nivel</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>El Castillo</td>
-                    <td>La icónica pirámide central dedicada al dios Kukulkán.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Templo de los Guerreros</td>
-                    <td>Una estructura con columnas talladas que representa a los guerreros toltecas.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Grupo de las Mil Columnas</td>
-                    <td>Área ceremonial o mercado rodeado de numerosas columnas.</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>El Osario</td>
-                    <td>Pirámide más pequeña con una cueva en la base usada en rituales.</td>
-                </tr>
+            <tbody id="zonas-body">
+                <!-- Los datos de las zonas se cargarán dinámicamente aquí -->
             </tbody>
         </table>
 
@@ -93,7 +77,5 @@
             <p>¿Necesitas ayuda? <span>?</span></p>
         </div>
     </div>
-
-    <script src="/JS/menu.js"></script>
 </body>
 </html>
